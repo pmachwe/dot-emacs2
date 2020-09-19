@@ -25,7 +25,8 @@
           (const :tag "ac" ac)))
 
 ;;;; Load packages
-(add-to-list 'load-path user-emacs-directory)
+(add-to-list 'load-path
+	     (concat user-emacs-directory "/lisp")
 
 (cond
  ((eq pm-package-manager 'package)
