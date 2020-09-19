@@ -15,6 +15,7 @@
           (const :tag "Ido" ido)
           (const :tag "Helm" helm)
           (const :tag "Ivy" ivy)
+          (const :tag "Selectrum" selectrum)
           (const :tag "Default" default)))
 
 (defcustom pm-autocomplete-framework 'company
@@ -42,10 +43,15 @@
  ((eq pm-completion-system 'helm)
   (load "helm-setup"))
  ((eq pm-completion-system 'ivy)
-  (load "ivy-setup")))
+  (load "ivy-setup"))
+ ((eq pm-completion-system 'selectrum)
+  (load "selectrum-setup")))
 
 (cond
  ((eq pm-autocomplete-framework 'company)
   (load "company-setup"))
  ((eq pm-autocomplete-framework 'ac)
   (load "ac-setup")))
+
+(load "personal-key-bindings")
+(load "local-setup")
