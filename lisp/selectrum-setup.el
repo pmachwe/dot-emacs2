@@ -2,7 +2,9 @@
 
 (use-package selectrum
   :config
-  (selectrum-mode +1))
+  (selectrum-mode +1)
+  :bind (("M-j" . find-file)
+         ("M-o" . switch-to-buffer)))
 
 (use-package selectrum-prescient
   :requires (selectrum prescient)
