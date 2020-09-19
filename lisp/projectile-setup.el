@@ -18,4 +18,9 @@
   (setq projectile-enable-caching t)
   :delight '(:eval (concat " " (projectile-project-name))))
 
+(use-package persp-projectile
+  :bind (:map projectile-mode-map
+              ("C-c p p" . projectile-persp-switch-project)
+              ("C-c p C-p" . projectile-switch-project)))
+
 (provide 'projectile-setup)
