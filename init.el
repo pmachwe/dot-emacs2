@@ -53,5 +53,7 @@
  ((eq pm-autocomplete-framework 'ac)
   (load "ac-setup")))
 
-(load "personal-key-bindings")
+(load "magit-setup")
+
+(load "personal-keybindings")
 (load "local-setup")
