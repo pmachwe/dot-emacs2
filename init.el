@@ -56,5 +56,6 @@
 (load "projectile-setup")
 (load "tools-setup")
 (load "magit-setup")
+(load "org-setup")
 (load "personal-keybindings")
 (load "local-setup")
