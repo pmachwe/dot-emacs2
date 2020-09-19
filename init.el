@@ -58,4 +58,5 @@
 (load "magit-setup")
 (load "org-setup")
 (load "personal-keybindings")
+(load "functions")
 (load "local-setup")
