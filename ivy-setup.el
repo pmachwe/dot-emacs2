@@ -40,14 +40,6 @@
         :map read-expression-map
         ("C-r" . counsel-expression-history)))
 
-(use-package prescient
-  :custom
-  (prescient-history-length 50)
-  (prescient-save-file "~/.emacs.d/prescient-items")
-  (prescient-filter-method '(fuzzy initialism regexp))
-  :config
-  (prescient-persist-mode 1))
-
 (use-package ivy-prescient
   :requires (prescient ivy)
   :custom

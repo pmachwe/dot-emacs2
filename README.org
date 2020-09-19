@@ -1,1 +1,5 @@
 New version of Emacs configuration.
+
+The idea is to make this more configurable so that various packages
+could be used without making much changes to the configuration
+file. The relevant packages could be load by changing some defaults.
