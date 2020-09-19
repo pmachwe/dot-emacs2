@@ -17,4 +17,9 @@
 (setq straight-use-package-by-default t)
 (straight-use-package 'use-package)
 
+(add-to-list 'straight-built-in-pseudo-packages 'dired)
+(add-to-list 'straight-built-in-pseudo-packages 'dired-async)
+(add-to-list 'straight-built-in-pseudo-packages 'replace)
+(add-to-list 'straight-built-in-pseudo-packages 'isearch)
+
 (provide 'straight-setup)

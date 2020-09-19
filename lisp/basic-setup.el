@@ -74,6 +74,8 @@
   ;; Open in maximized frame
   (add-to-list 'initial-frame-alist '(fullscreen . maximized)))
 
+(use-package f)
+
 (use-package shell
   :config
 
