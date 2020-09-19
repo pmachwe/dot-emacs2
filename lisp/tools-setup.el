@@ -145,7 +145,6 @@
   (rainbow-delimiters-mode))
 
 (use-package p4
-  :if (my/is-work-env)
   ;; Giving errors on work computer
   ;; :hook prog-mode
   )

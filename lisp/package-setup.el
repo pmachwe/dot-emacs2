@@ -18,4 +18,7 @@
   (require 'use-package))
 (require 'bind-key)
 
+;; (setq use-package-always-ensure t)
+(setq package-check-signature nil)
+
 (provide 'package-setup)
