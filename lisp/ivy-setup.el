@@ -86,4 +86,8 @@
          ("M-*" . counsel-gtags-go-backwards))
   :delight 'counsel-gtags-mode)
 
+(use-package 'counsel-etags
+  :hook (c-mode c++-mode)
+  :bind ("M-." . counsel-etags-find-tag-at-point))
+
 (provide 'ivy-setup)
