@@ -39,10 +39,10 @@
 (cond
  ((eq pm-completion-system 'ido)
   (load "ido-setup"))
- (eq pm-completion-system 'helm)
- (load "helm-setup")
- (eq pm-completion-system 'ivy)
-  (load "ivy-setup"))
+ ((eq pm-completion-system 'helm)
+  (load "helm-setup"))
+ ((eq pm-completion-system 'ivy)
+  (load "ivy-setup")))
 
 (cond
  ((eq pm-autocomplete-framework 'company)
