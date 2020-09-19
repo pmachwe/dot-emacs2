@@ -21,5 +21,6 @@
 (add-to-list 'straight-built-in-pseudo-packages 'dired-async)
 (add-to-list 'straight-built-in-pseudo-packages 'replace)
 (add-to-list 'straight-built-in-pseudo-packages 'isearch)
+(add-to-list 'straight-built-in-pseudo-packages 'abbrev)
 
 (provide 'straight-setup)

@@ -8,7 +8,7 @@
           (const :tag "package" package)
           (const :tag "straight" straight)))
 
-(defcustom pm-completion-system 'ido
+(defcustom pm-completion-system 'ivy
   "The completion system to be used."
   :group 'pm-setup
   :type '(radio
@@ -57,6 +57,7 @@
 (load "tools-setup")
 (load "magit-setup")
 (load "org-setup")
+(load "themes-setup")
 (load "personal-keybindings")
 (load "functions")
 (load "local-setup")

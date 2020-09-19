@@ -121,10 +121,7 @@
   (setq dtrt-indent-verbosity 0)
   :delight)
 
-;; Smart Parens
-
 (use-package smartparens
-  :disabled t
   :hook (prog-mode . smartparens-mode)
   :config
   (smartparens-mode t)
@@ -137,6 +134,7 @@
                                                            ("* ||\n[i]" "RET")))))
 
 (use-package paredit
+  :disabled
   :hook (emacs-lisp-mode . paredit-mode))
 
 (use-package rainbow-delimiters
