@@ -80,6 +80,7 @@
   (ivy-rich-mode 1))
 
 (use-package counsel-gtags
+  :disabled
   :hook (c-mode c++-mode)
   :bind (("M-." . counsel-gtags-dwim)
          ("M-*" . counsel-gtags-go-backwards))
