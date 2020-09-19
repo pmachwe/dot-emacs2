@@ -14,11 +14,9 @@
   (company-tng-configure-default)
   :hook (after-init . global-company-mode))
 
-(use-package company-prescient
-  :requires (company prescient))
+(use-package company-prescient)
 
 (use-package company-shell
-  :requires company
   :config
   (add-to-list 'company-backends '(company-shell company-shell-env)))
 

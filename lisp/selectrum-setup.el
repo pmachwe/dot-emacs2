@@ -7,7 +7,6 @@
          ("M-o" . switch-to-buffer)))
 
 (use-package selectrum-prescient
-  :requires (selectrum prescient)
   :config
   ;; to make sorting and filtering more intelligent
   (selectrum-prescient-mode +1)

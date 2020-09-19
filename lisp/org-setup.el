@@ -42,7 +42,6 @@
   :hook org-mode)
 
 (use-package org-tree-slide
-  :requires org
   :hook org-mode
   :bind (:map org-mode-map
               ("[f8]" . org-tree-slide-mode)

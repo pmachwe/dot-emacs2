@@ -48,7 +48,6 @@
 (use-package flx)
 
 (use-package flx-ido
-  :requires (flx ido)
   :config
   (flx-ido-mode 1)
   (setq ido-enable-flex-matching t))
@@ -60,7 +59,6 @@
   (smex-initialize))
 
 (use-package idomenu
-  :requires ido
   :bind ("C-c /" . idomenu))
 
 ;; Fallback

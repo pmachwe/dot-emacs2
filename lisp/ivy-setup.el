@@ -16,13 +16,11 @@
   :delight ivy-mode)
 
 (use-package swiper
-  :requires ivy
-  :after ivy
   :bind("M-s i" . swiper))
 
 (use-package counsel
-  :requires ivy
-  :after ivy
+  :config
+  (counsel-mode 1)
   :bind(("M-x" . counsel-M-x)
         ("C-x C-f" . counsel-find-file)
         ("M-j" . counsel-find-file)
@@ -41,7 +39,6 @@
         ("C-r" . counsel-expression-history)))
 
 (use-package ivy-prescient
-  :requires (prescient ivy)
   :custom
   (ivy-prescient-sort-commands
    '(:not swiper ivy-switch-buffer counsel-switch-buffer))
@@ -52,7 +49,7 @@
   (ivy-prescient-mode 1))
 
 (use-package ivy-posframe
-  :requires ivy
+  :if window-system
   :custom
   (ivy-posframe-parameters
    '((left-fringe . 2)
@@ -75,8 +72,6 @@
   :delight ivy-posframe-mode)
 
 (use-package ivy-rich
-  :requires ivy
-  :ensure t
   :custom
   (ivy-rich-path-style 'abbreviate)
   :config
@@ -84,12 +79,7 @@
           #'ivy-format-function-line)
   (ivy-rich-mode 1))
 
- (use-package icomplete
-   :config
-   (icomplete-mode 1))
-
 (use-package counsel-gtags
-  :requires counsel
   :hook (c-mode c++-mode)
   :bind (("M-." . counsel-gtags-dwim)
          ("M-*" . counsel-gtags-go-backwards))

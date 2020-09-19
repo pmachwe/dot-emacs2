@@ -20,13 +20,16 @@
 (use-package perspective
   :init
   (persp-mode)
-  (defun my/persp-switch-to-buffer()
-    (interactive)
-    (completing-read "Switch to buffer: " (remove nil (mapcar 'buffer-name (persp-buffers (persp-curr))))))
+  ;; (defun my/persp-switch-to-buffer()
+  ;;   (interactive)
+  ;;   (completing-read "Switch to buffer: " (remove nil (mapcar 'buffer-name (persp-buffers (persp-curr))))))
   :custom
   (persp-mode-prefix-key (kbd "C-."))
   :config
-  (define-key perspective-map (kbd ".") 'my/persp-switch-to-buffer))
+  ;; (define-key perspective-map (kbd ".") 'my/persp-switch-to-buffer)
+  (when (eq pm-completion-system 'ivy)
+    (bind-key "C-x b" #'persp-counsel-switch-buffer)
+    (bind-key "M-o" #'persp-counsel-switch-buffer)))
 
 (use-package which-key
   :config

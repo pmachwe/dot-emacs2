@@ -12,8 +12,6 @@
     (setq projectile-completion-system 'helm))
    ((eq pm-completion-system 'ivy)
     (use-package counsel-projectile
-      :requires (counsel projectile)
-      :requires (counsel projectile)
       :config
       (counsel-projectile-mode 1))
     (setq projectile-completion-system 'ivy)))
