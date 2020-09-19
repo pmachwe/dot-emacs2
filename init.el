@@ -1,7 +1,7 @@
 (defgroup pm-setup nil
   "Add personal customizations to this group.")
 
-(defcustom pm-package-manager 'package
+(defcustom pm-package-manager 'straight
   "The completion system to be used."
   :group 'pm-setup
   :type '(radio
@@ -25,6 +25,7 @@
           (const :tag "ac" ac)))
 
 ;;;; Load packages
+(add-to-list 'load-path user-emacs-directory)
 
 (cond
  ((eq pm-package-manager 'package)
