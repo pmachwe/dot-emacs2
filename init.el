@@ -56,6 +56,8 @@
 (load "projectile-setup")
 (load "tools-setup")
 (load "magit-setup")
+(load "ediff-setup")
+(load "p4-setup")
 (load "prog-setup")
 (load "org-setup")
 (load "themes-setup")

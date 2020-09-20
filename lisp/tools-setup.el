@@ -145,13 +145,6 @@
   :config
   (rainbow-delimiters-mode))
 
-(use-package p4
-  ;; Giving errors on work computer
-  ;; :hook prog-mode
-  )
-
-;; expand region
-
 (use-package expand-region
   :bind (("C-=" . er/expand-region)
          ("C-c = -" . er/contract-region)
