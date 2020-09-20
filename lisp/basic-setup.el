@@ -166,17 +166,6 @@ With universal arg, provide a name which will be made unique."
          ("C-M-s" . isearch-forward)
          ("C-M-r" . isearch-backward)))
 
-(use-package emacs
-  :config
-  (defmacro csetq (variable value)
-    `(funcall (or (get ',variable 'custom-set)
-                  'set-default)
-              ',variable ,value))
-  (csetq ediff-window-setup-function 'ediff-setup-windows-plain)
-  (csetq ediff-split-window-function 'split-window-horizontally)
-  (csetq ediff-diff-options "-w")
-  (add-hook 'ediff-after-quit-hook-internal 'winner-undo))
-
 (use-package elec-pair
   :hook (prog-mode . electric-pair-mode)
   :config

@@ -61,4 +61,5 @@
 (load "themes-setup")
 (load "personal-keybindings")
 (load "functions")
-(load "local-setup")
+;; May not exist
+(load "local-setup" t)

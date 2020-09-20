@@ -22,5 +22,6 @@
 (add-to-list 'straight-built-in-pseudo-packages 'replace)
 (add-to-list 'straight-built-in-pseudo-packages 'isearch)
 (add-to-list 'straight-built-in-pseudo-packages 'abbrev)
+(add-to-list 'straight-built-in-pseudo-packages 'ediff)
 
 (provide 'straight-setup)
