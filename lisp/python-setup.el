@@ -1,14 +1,11 @@
 ;;; Setup for python
 ;;; Mostly taken from: https://realpython.com/emacs-the-best-python-editor
+;;; TODO: Move ensure-system-package under condtion of whether the
+;;;       package is not already installed
 
 (use-package use-package-ensure-system-package)
 
 (use-package elpy
-  :hook python-mode)
-
-(use-package python-mode 
-  :mode ("\\.py\\'" . python-mode) 
-  :interpreter ("python" . python-mode) 
   :ensure-system-package
   ((elpy . "pip install elpy")
    (jedi . "pip install jedi")
@@ -27,10 +24,10 @@
           python-shell-prompt-detect-failure-warning nil)
     (add-to-list 'python-shell-completion-native-disabled-interpreters
                  "jupyter"))
-  ((executable-find "ipython")
-   (setq python-shell-interpreter "ipython"))
-  ((executable-find "ipython3")
-   (setq python-shell-interpreter "ipython3"))))
+   ((executable-find "ipython3")
+    (setq python-shell-interpreter "ipython3"))
+   ((executable-find "ipython")
+    (setq python-shell-interpreter "ipython"))))
 
 ;; Can update to flycheck from default flymake
 (use-package flycheck
