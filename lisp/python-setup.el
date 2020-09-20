@@ -29,6 +29,9 @@
    ((executable-find "ipython")
     (setq python-shell-interpreter "ipython"))))
 
+(use-package blacken
+  :hook (python-mode . blacken-mode))
+
 ;; Can update to flycheck from default flymake
 (use-package flycheck
   :disabled
