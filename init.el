@@ -59,6 +59,7 @@
 (load "ediff-setup")
 (load "p4-setup")
 (load "prog-setup")
+(load "python-setup")
 (load "org-setup")
 (load "themes-setup")
 (load "personal-keybindings")

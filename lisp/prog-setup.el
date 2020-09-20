@@ -40,27 +40,9 @@
     ;; (smartparens-strict-mode)
     (prettify-symbols-mode))
 
-  (defun my/python-prog-settings()
-    "Specific settings for Python."
-    (elpy-enable)
-    (elpy-mode 1)
-    (setq-default python-indent-offset 4))
-   ; (highlight-indentation-mode)
-    ;(fci-mode 1))
-
   :hook ((prog-mode       . my/common-prog-settings)
          (c-mode          . my/c-prog-settings)
          (c++-mode        . my/c-prog-settings)
-         (emacs-lisp-mode . my/elisp-prog-settings)
-         (python-mode     . my/python-prog-settings)))
-
-(use-package python-mode 
-  :mode ("\\.py\\'" . python-mode) 
-  :interpreter ("python" . python-mode) 
-  :config         
-  (when (executable-find "ipython")                                        
-    (setq python-shell-interpreter "ipython"))              
-  (when (executable-find "ipython3")   
-    (setq python-shell-interpreter "ipython3")))
+         (emacs-lisp-mode . my/elisp-prog-settings)))
 
 (provide 'prog-setup)
