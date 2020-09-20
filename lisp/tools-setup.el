@@ -157,4 +157,14 @@
   (yas-reload-all)                                                                                                                           
   (yas-minor-mode))
 
+(use-package crux
+  :bind (("C-x 4 t" . crux-transpose-windows)
+         ("C-c D" . crux-delete-file-and-buffer)
+         ("C-k" . crux-smart-kill-line)
+         ("C-c n" . crux-cleanup-buffer-or-region)
+         ("M-L" . crux-duplicate-current-line-or-region)
+         ("C-c M-;" . crux-duplicate-and-comment-current-line-or-region)
+         ("C-c I" . crux-find-user-init-file)
+         ("C-c C-k" . crux-kill-line-backwards)))
+
 (provide 'tools-setup)
