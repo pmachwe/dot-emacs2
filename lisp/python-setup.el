@@ -1,6 +1,7 @@
 ;;; Setup for python
 ;;; Mostly taken from: https://realpython.com/emacs-the-best-python-editor
-;;; TODO: use-package not accepting :ensure-system-package keyword, debug
+
+(use-package use-package-ensure-system-package)
 
 (use-package elpy
   :hook python-mode)
@@ -8,12 +9,12 @@
 (use-package python-mode 
   :mode ("\\.py\\'" . python-mode) 
   :interpreter ("python" . python-mode) 
-  ;; :ensure-system-package
-  ;; ((elpy . "pip install elpy")
-  ;;  (jedi . "pip install jedi")
-  ;;  (rope . "pip install rope")
-  ;;  (black . "pip install black")
-  ;;  (rope . "pip install rope"))
+  :ensure-system-package
+  ((elpy . "pip install elpy")
+   (jedi . "pip install jedi")
+   (rope . "pip install rope")
+   (black . "pip install black")
+   (rope . "pip install rope"))
   :config
   ;; Enable elpy
   (elpy-enable)
