@@ -20,7 +20,6 @@
 
 (use-package persp-projectile
   :bind (:map projectile-mode-map
-              ("C-c p p" . projectile-persp-switch-project)
-              ("C-c p C-p" . projectile-switch-project)))
+              ("C-c p ." . projectile-persp-switch-project)))
 
 (provide 'projectile-setup)
