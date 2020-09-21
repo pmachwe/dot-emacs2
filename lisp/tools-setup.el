@@ -167,4 +167,8 @@
          ("C-c I" . crux-find-user-init-file)
          ("C-c C-k" . crux-kill-line-backwards)))
 
+(use-package whole-line-or-region
+  :config
+  (whole-line-or-region-global-mode 1))
+
 (provide 'tools-setup)

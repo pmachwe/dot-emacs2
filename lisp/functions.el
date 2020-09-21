@@ -33,16 +33,16 @@
       (when parent
         (find-file-in-heirarchy parent fname)))))
 
-(defun my/yank-dwim (type)
-  (let (bounds)
-    (if (region-active-p)
-        (kill-ring-save (region-beginning) (region-end))
-      (progn
-        (setq bounds (bounds-of-thing-at-point type))
-        (copy-region-as-kill (car bounds) (cdr bounds))))))
+;; (defun my/yank-dwim (type)
+;;   (let (bounds)
+;;     (if (region-active-p)
+;;         (kill-ring-save (region-beginning) (region-end))
+;;       (progn
+;;         (setq bounds (bounds-of-thing-at-point type))
+;;         (copy-region-as-kill (car bounds) (cdr bounds))))))
 
-(global-set-key (kbd "M-w") '(lambda () (interactive) (my/yank-dwim 'symbol)))
-(global-set-key (kbd "M-l") '(lambda () (interactive) (my/yank-dwim 'line)))
+;; (global-set-key (kbd "M-w") '(lambda () (interactive) (my/yank-dwim 'symbol)))
+;; (global-set-key (kbd "M-l") '(lambda () (interactive) (my/yank-dwim 'line)))
 
 ;; Setup GTAGSROOT when first called find-tags
 (defun my/set-gtags-root()
