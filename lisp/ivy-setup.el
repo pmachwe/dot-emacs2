@@ -68,7 +68,7 @@
   ;; when the font is changed interactively, need to
   ;; check and add a hook.
   (setq ivy-posframe-font (elt (query-font (face-attribute 'default :font)) 0))
-  (ivy-posframe-mode 1)
+  ;; (ivy-posframe-mode 1)
   :delight ivy-posframe-mode)
 
 (use-package ivy-rich
