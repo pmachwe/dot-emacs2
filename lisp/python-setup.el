@@ -6,12 +6,12 @@
 (use-package use-package-ensure-system-package)
 
 (use-package elpy
-  :ensure-system-package
-  ((elpy . "pip install elpy")
-   (jedi . "pip install jedi")
-   (rope . "pip install rope")
-   (black . "pip install black")
-   (rope . "pip install rope"))
+  ;; :ensure-system-package
+  ;; ((elpy . "pip install elpy")
+  ;;  (jedi . "pip install jedi")
+  ;;  (rope . "pip install rope")
+  ;;  (black . "pip install black")
+  ;;  (rope . "pip install rope"))
   :config
   ;; Enable elpy
   (elpy-enable)

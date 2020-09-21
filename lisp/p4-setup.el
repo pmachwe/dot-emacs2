@@ -5,6 +5,9 @@
   ;; Giving errors on work computer
   ;; :hook prog-mode
   :config
+  ;; Make sure to use the true filenames
+  ;; otherwise perforce gets confused
+  (setq find-file-visit-truename 't)
   (defun my/get-client-from-config()
     "Find .p4config upwards"
     (interactive)
