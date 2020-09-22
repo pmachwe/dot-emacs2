@@ -171,4 +171,8 @@
   :config
   (whole-line-or-region-global-mode 1))
 
+(use-package default-text-scale
+  :config
+  (default-text-scale-mode 1))
+
 (provide 'tools-setup)
