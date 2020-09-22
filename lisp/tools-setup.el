@@ -175,4 +175,7 @@
   :config
   (default-text-scale-mode 1))
 
+(use-package nlinum-relative
+  :hook (prog-mode . nlinum-relative-mode))
+
 (provide 'tools-setup)
