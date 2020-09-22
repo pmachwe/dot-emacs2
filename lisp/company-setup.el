@@ -17,6 +17,7 @@
 (use-package company-prescient)
 
 (use-package company-shell
+  :disabled
   :config
   (add-to-list 'company-backends '(company-shell company-shell-env)))
 
