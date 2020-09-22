@@ -258,4 +258,14 @@ With universal arg, provide a name which will be made unique."
   (message "Setting up options for %s" system-type)
   (remove-hook 'find-file-hooks 'vc-find-file-hook))
 
+(use-package imenu
+  :config
+
+  (defun pm/use-pacakge-imenu ()
+    "Setup FLOW steps for imenu."
+    (interactive)
+    (add-to-list 'imenu-generic-expression '(nil "use-package.*" 0)))
+
+  (add-hook 'emacs-lisp-mode-hook 'pm/use-pacakge-imenu))
+
 (provide 'basic-setup)
