@@ -23,7 +23,7 @@
   :group 'pm-setup
   :type '(radio
           (const :tag "company" company)
-          (const :tag "ac" ac)))
+          (const :tag "auto-complete" auto-complete)))
 
 ;;;; Load packages
 (add-to-list 'load-path
@@ -50,8 +50,8 @@
 (cond
  ((eq pm-autocomplete-framework 'company)
   (load "company-setup"))
- ((eq pm-autocomplete-framework 'ac)
-  (load "ac-setup")))
+ ((eq pm-autocomplete-framework 'auto-complete)
+  (load "auto-complete-setup")))
 
 (load "projectile-setup")
 (load "tools-setup")
