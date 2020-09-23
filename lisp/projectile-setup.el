@@ -9,6 +9,12 @@
    ((eq pm-completion-system 'ido)
     (setq projectile-completion-system 'ido))
    ((eq pm-completion-system 'helm)
+    (use-package helm-projectile
+      :config
+      ;; Bug opens files for current project
+      ;; instead of new project when switching
+      ;; (helm-projectile-on)
+      )
     (setq projectile-completion-system 'helm))
    ((eq pm-completion-system 'ivy)
     (use-package counsel-projectile
