@@ -35,6 +35,7 @@
  ((eq pm-package-manager 'straight)
   (load "straight-setup")))
 
+(load "themes-setup")
 (load "basic-setup")
 
 (cond
@@ -61,7 +62,6 @@
 (load "prog-setup")
 (load "python-setup")
 (load "org-setup")
-(load "themes-setup")
 (load "personal-keybindings")
 (load "functions")
 ;; May not exist
