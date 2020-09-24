@@ -11,7 +11,9 @@
 
 (use-package modus-operandi-theme)
 
-(use-package nord-theme)
+(use-package nord-theme
+  :config
+  (load-theme 'nord t))
 
 (use-package telephone-line
   :if window-system
