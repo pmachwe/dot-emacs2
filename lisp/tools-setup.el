@@ -106,14 +106,24 @@
   (xclip-mode 1))
 
 (use-package ace-window
-  :custom
-  (aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l))
-  (aw-dispatch-alist
-   '((?s aw-swap-window "Swap Windows")
-     (?2 aw-split-window-vert "Split Window Vertically")
-     (?3 aw-split-window-horz "Split Window Horizontally")
-     (?? aw-show-dispatch-help)))
-  :config
+  :config  
+  (setq aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l))
+  (setq aw-dispatch-alist
+    '((?x aw-delete-window "Delete Window")
+      (?m aw-swap-window "Swap Windows")
+      (?M aw-move-window "Move Window")
+      (?c aw-copy-window "Copy Window")
+      (?j aw-switch-buffer-in-window "Select Buffer")
+      (?n aw-flip-window)
+      (?u aw-switch-buffer-other-window "Switch Buffer Other Window")
+      (?c aw-split-window-fair "Split Fair Window")
+      (?v aw-split-window-vert "Split Vert Window")
+      (?b aw-split-window-horz "Split Horz Window")
+      (?o delete-other-windows "Delete Other Windows")
+      (?? aw-show-dispatch-help))
+    ;; "List of actions for `aw-dispatch-default'."
+    )
+  (setq aw-ignore-current t)
   (ace-window-display-mode 1)
   :bind ("C-o" . ace-window))
 
