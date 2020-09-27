@@ -62,6 +62,7 @@
 (load "prog-setup")
 (load "python-setup")
 (load "org-setup")
+(load "org-roam-setup")
 (load "personal-keybindings")
 (load "functions")
 ;; May not exist
