@@ -1,3 +1,5 @@
+;;; Settings for org-roam and other note taking packages
+
 (use-package org-roam
   :bind (("C-c r f" . org-roam-find-file)
          ("C-c r i" . org-roam-insert)
