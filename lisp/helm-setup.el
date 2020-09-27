@@ -8,6 +8,7 @@
         ("M-j" . helm-find-files)
         ("M-o" . helm-mini)
         ("C-x C-r" . helm-recentf)
+        ("C-c /" . helm-imenu)
         :map helm-map
         ([tab] . helm-execute-persistent-action) ; rebind tab to run persistent action
         ("C-i" . helm-execute-persistent-action) ; make TAB works in terminal
