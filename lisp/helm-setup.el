@@ -4,7 +4,6 @@
   :bind(
         ("M-x" . helm-M-x)
         ("M-y" . helm-show-kill-ring)
-        ("C-c h g" . helm-google-suggest)
         ("M-j" . helm-find-files)
         ("M-o" . helm-mini)
         ("C-x C-r" . helm-recentf)
@@ -19,7 +18,7 @@
     ;; The default "C-x c" is quite close to "C-x C-c", which quits Emacs.
     ;; Changed to "C-c h". Note: We must set "C-c h" globally, because we
     ;; cannot change `helm-command-prefix-key' once `helm-config' is loaded.
-    (global-set-key (kbd "C-c h") 'helm-command-prefix)
+    (global-set-key (kbd "C-x h") 'helm-command-prefix)
     (global-unset-key (kbd "C-x c"))
     (when (executable-find "curl")
       (setq helm-google-suggest-use-curl-p t))
