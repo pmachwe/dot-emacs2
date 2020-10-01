@@ -8,8 +8,10 @@
          ("C-c r r" . org-roam))
   :config
   (setq org-roam-directory "~/org-roam")
-  (add-to-list 'org-agenda-files "~/org-roam")
-  (add-to-list 'org-agenda-files "~/org-roam/dailies")
+  (setq org-roam-agenda-dirs (list org-roam-directory (f-join org-roam-directory "dailies")))
+  (if (boundp 'org-agenda-files)
+      (setq org-agenda-files (append org-agenda-files org-roam-agenda-dirs))
+    (setq org-agenda-files org-roam-agenda-dirs))
   (setq org-roam-dailies-capture-templates '(("d" "daily" plain #'org-roam-capture--get-point
                                               "\n\n* Tasks\n\n* Discussions"
                                               :immediate-finish t
