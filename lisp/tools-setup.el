@@ -102,6 +102,8 @@
          ("z" . scroll-down-command)))
 
 (use-package xclip
+  :unless (or (string-equal system-type "windows-nt")
+              (string-equal system-type "ms-dos"))
   :config
   (xclip-mode 1))
 
