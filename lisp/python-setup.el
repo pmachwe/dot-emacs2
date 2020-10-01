@@ -2,6 +2,8 @@
 ;;; Mostly taken from: https://realpython.com/emacs-the-best-python-editor
 ;;; TODO: Move ensure-system-package under condtion of whether the
 ;;;       package is not already installed
+;;; NOTE: elpy may pick a differnt version of python and some autocompletion
+;;;       may not work so set elpy-rpc-python-command
 
 (use-package use-package-ensure-system-package)
 
@@ -45,5 +47,14 @@
 (use-package ein
   :disabled
   :hook python-mode)
+
+;;; NOTE: elpy-company-backend gets added so
+;;;       this should not be required
+;; (use-package company-jedi
+;;   :disabled
+;;   :config
+;;   (defun my/python-mode-hook ()
+;;     (add-to-list 'company-backends 'company-jedi))
+;;   (add-hook 'python-mode-hook 'my/python-mode-hook))
 
 (provide 'python-setup)

@@ -25,6 +25,9 @@
           (const :tag "company" company)
           (const :tag "auto-complete" auto-complete)))
 
+(defcustom pm-lsp-mode nil
+  "LSP mode to use.")
+
 ;;;; Load packages
 (add-to-list 'load-path
 	     (concat user-emacs-directory "/lisp"))
@@ -60,7 +63,9 @@
 (load "ediff-setup")
 (load "p4-setup")
 (load "prog-setup")
-(load "python-setup")
+(if pm-lsp-mode
+    (load "lsp-setup")
+  (load "python-setup"))
 (load "org-setup")
 (load "org-roam-setup")
 (load "personal-keybindings")
