@@ -137,7 +137,7 @@
   :delight)
 
 (use-package smartparens
-  :hook (prog-mode . smartparens-mode)
+  :hook (emacs-lisp-mode . smartparens-mode)
   :config
   (smartparens-mode t)
   (require 'smartparens-config)
