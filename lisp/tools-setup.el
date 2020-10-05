@@ -47,6 +47,9 @@
   :bind (("M-z" . avy-zap-to-char-dwim)
          ("M-Z" . avy-zap-up-to-char-dwim)))
 
+(use-package iedit
+  :bind (("C-," . iedit-mode)))
+
 ;; Anzu
 (use-package anzu
   :init
