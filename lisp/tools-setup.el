@@ -26,7 +26,7 @@
   :custom
   (persp-mode-prefix-key (kbd "C-."))
   :config
-  ;; (define-key perspective-map (kbd ".") 'my/persp-switch-to-buffer)
+  (define-key perspective-map (kbd "C-.") 'persp-switch-last)
   (when (eq pm-completion-system 'ivy)
     (bind-key "C-x b" #'persp-counsel-switch-buffer)
     (bind-key "M-o" #'persp-counsel-switch-buffer)))

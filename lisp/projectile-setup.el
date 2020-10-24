@@ -25,7 +25,7 @@
   :delight '(:eval (concat " " (projectile-project-name))))
 
 (use-package persp-projectile
-  :bind (:map projectile-mode-map
-              ("C-c p ." . projectile-persp-switch-project)))
+  :bind (:map projectile-command-map
+              ("." . projectile-persp-switch-project)))
 
 (provide 'projectile-setup)
