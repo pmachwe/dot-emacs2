@@ -164,6 +164,7 @@
   :bind (("C-=" . er/expand-region)
          ("C-c = -" . er/contract-region)
          ("C-c = =" . er/mark-symbol)
+         ("M-=" . er/mark-symbol)
          ("C-c = f" . er/mark-defun)))
 
 (use-package yasnippet                                                                                                                       
