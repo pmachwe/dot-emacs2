@@ -127,7 +127,9 @@ With universal arg, provide a name which will be made unique."
          ("C-j" . comint-send-input)))
 
 (use-package dired
+  :bind ("C-x C-d" . dired)
   :config
+  (require 'dired-x)
   (setq dired-recursive-copies 'always)
   (setq dired-recursive-deletes 'always)
   (setq dired-isearch-filenames 'dwim)

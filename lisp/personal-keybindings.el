@@ -9,7 +9,9 @@
          ("M-K" . kill-buffer)
          ("C-c ," . highlight-symbol-at-point)
          ("C-c C-," . unhighlight-regexp)
-         ("C-M-o" . mode-line-other-window))
+         ("C-M-o" . mode-line-other-window)
+         ("C-c C-r" . revert-buffer)
+         ("C-c |" . eval-region))
   
   :init
   ;; Preferred way as per documentation
