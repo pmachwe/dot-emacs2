@@ -192,6 +192,11 @@
   (default-text-scale-mode 1))
 
 (use-package nlinum-relative
+  :if window-system
   :hook (prog-mode . nlinum-relative-mode))
+
+(use-package vdiff
+  :config
+  (define-key vdiff-mode-map (kbd "C-c") vdiff-mode-prefix-map))
 
 (provide 'tools-setup)
