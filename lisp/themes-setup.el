@@ -12,6 +12,7 @@
 (use-package modus-operandi-theme)
 
 (use-package nord-theme
+  :if window-system
   :config
   (load-theme 'nord t))
 
