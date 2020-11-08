@@ -133,8 +133,8 @@ With universal arg, provide a name which will be made unique."
   (setq dired-recursive-copies 'always)
   (setq dired-recursive-deletes 'always)
   (setq dired-isearch-filenames 'dwim)
-  (setq delete-by-moving-to-trash t)
-  ;(setq dired-listing-switches "-altr --group-directories-first")
+  (setq delete-by-moving-to-trash nil)
+  ;; (setq dired-listing-switches "-altr --group-directories-first")
   (setq dired-dwim-target t)
   :hook (dired-mode . hl-line-mode))
 
