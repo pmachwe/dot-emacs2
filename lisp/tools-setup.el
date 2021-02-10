@@ -32,6 +32,7 @@
     (bind-key "M-o" #'persp-counsel-switch-buffer)))
 
 (use-package which-key
+  :defer 1
   :config
   (which-key-mode)
   :delight)
@@ -52,6 +53,7 @@
 
 ;; Anzu
 (use-package anzu
+  :defer 2
   :init
   (global-anzu-mode +1)
   (global-set-key [remap query-replace] 'anzu-query-replace)
@@ -59,11 +61,13 @@
   :delight)
 
 (use-package undo-tree
+  :defer 2
   :config
   (setq global-undo-tree-mode t)
   (setq undo-tree-visualizer-diff t))
 
 (use-package hungry-delete
+  :defer 2
   :config
   (global-hungry-delete-mode))
 
@@ -79,6 +83,7 @@
   :init (miniedit-install))
 
 (use-package saveplace
+  :defer 1
   :custom
   (save-place-file "~/.emacs.d/saveplace")
   :config
@@ -105,12 +110,14 @@
          ("z" . scroll-down-command)))
 
 (use-package xclip
+  :defer 5
   :unless (or (string-equal system-type "windows-nt")
               (string-equal system-type "ms-dos"))
   :config
   (xclip-mode 1))
 
 (use-package ace-window
+  :defer 2
   :config  
   (setq aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l))
   (setq aw-dispatch-alist
@@ -184,18 +191,22 @@
          ("C-c C-k" . crux-kill-line-backwards)))
 
 (use-package whole-line-or-region
+  :defer 1
   :config
   (whole-line-or-region-global-mode 1))
 
 (use-package default-text-scale
+  :defer 2
   :config
   (default-text-scale-mode 1))
 
 (use-package nlinum-relative
+  :disabled t
   :if window-system
   :hook (prog-mode . nlinum-relative-mode))
 
 (use-package vdiff
+  :disabled t
   :config
   (define-key vdiff-mode-map (kbd "C-c") vdiff-mode-prefix-map))
 

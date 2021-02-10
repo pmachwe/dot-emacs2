@@ -2,8 +2,9 @@
 ;;; TODO: Use locate-dominating-file function
 
 (use-package p4
-  ;; Giving errors on work computer
-  ;; :hook prog-mode
+  :disabled t
+  :hook prog-mode
+  :commands (p4-edit p4-add p4-diff p4-sync p4-resolve p4-change p4-changes p4-revert)
   :config
   ;; Make sure to use the true filenames
   ;; otherwise perforce gets confused

@@ -5,9 +5,11 @@
 ;;; NOTE: elpy may pick a differnt version of python and some autocompletion
 ;;;       may not work so set elpy-rpc-python-command
 
-(use-package use-package-ensure-system-package)
+(use-package use-package-ensure-system-package
+  :defer 5)
 
 (use-package elpy
+  :hook python-mode
   ;; :ensure-system-package
   ;; ((elpy . "pip install elpy")
   ;;  (jedi . "pip install jedi")

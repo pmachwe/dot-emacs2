@@ -1,6 +1,7 @@
 ;;; Setup for ediff mode
 
 (use-package ediff
+  :commands (ediff ediff-files)
   :config
   (defmacro csetq (variable value)
     `(funcall (or (get ',variable 'custom-set)

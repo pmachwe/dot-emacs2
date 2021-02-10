@@ -14,6 +14,8 @@
       (eval-print-last-sexp)))
   (load bootstrap-file nil 'nomessage))
 
+(setq straight-check-for-modifications '(check-on-save find-when-checking))
+
 (setq straight-use-package-by-default t)
 (straight-use-package 'use-package)
 

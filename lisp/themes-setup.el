@@ -9,7 +9,8 @@
   ;; Corrects (and improves) org-mode's native fontification.
   (doom-themes-org-config))
 
-(use-package modus-operandi-theme)
+(use-package modus-operandi-theme
+  :defer 5)
 
 (use-package nord-theme
   :if window-system
