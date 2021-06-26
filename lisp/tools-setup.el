@@ -14,7 +14,7 @@
 ;; Not working well with ivy-switch-buffer
 ;; and other commands.
 (use-package elscreen-buffer-group
-  :disabled
+  :disabled t
   :after elscreen)
 
 (use-package perspective
@@ -93,6 +93,7 @@
   :bind ("C-c C-/" . imenu-anywhere))
 
 (use-package emamux
+  :disabled t
   :custom
   (global-set-key (kbd "C-c m") emamux:keymap)
   (emamux:completing-read-type 'ido)
@@ -103,6 +104,7 @@
          ("C-c m h" . emamux:split-window)))
 
 (use-package god-mode
+  :disabled t
   :bind (("<escape>" . god-local-mode)
          :map god-local-mode-map
          ("i" . god-local-mode)
@@ -110,7 +112,7 @@
          ("z" . scroll-down-command)))
 
 (use-package xclip
-  :defer 5
+  :disabled t
   :unless (or (string-equal system-type "windows-nt")
               (string-equal system-type "ms-dos"))
   :config
@@ -159,7 +161,7 @@
                                                            ("* ||\n[i]" "RET")))))
 
 (use-package paredit
-  :disabled
+  :disabled t
   :hook (emacs-lisp-mode . paredit-mode))
 
 (use-package rainbow-delimiters
@@ -174,10 +176,10 @@
          ("M-=" . er/mark-symbol)
          ("C-c = f" . er/mark-defun)))
 
-(use-package yasnippet                                                                                                                       
-  :commands yas-expand                                                                                                                       
-  :config                                                                                                                                    
-  (yas-reload-all)                                                                                                                           
+(use-package yasnippet
+  :commands yas-expand
+  :config
+  (yas-reload-all)
   (yas-minor-mode))
 
 (use-package crux
