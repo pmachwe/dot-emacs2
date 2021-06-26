@@ -14,7 +14,9 @@
          ("C-c |" . eval-region)
          ("C-c f" . find-name-dired)
          ("C-c F" . find-dired)
-         ("C-c r" . remember))
+         ("C-c r" . remember)
+         (("M-j" . find-file)
+         ("M-J" . find-file-other-window)))
   :init
   ;; Preferred way as per documentation
   ;; https://www.gnu.org/software/emacs/manual/html_node/efaq/Backspace-invokes-help.html

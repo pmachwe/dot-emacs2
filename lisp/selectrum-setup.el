@@ -9,8 +9,6 @@
   (prescient-persist-mode +1))
 
 (use-package selectrum
-  :bind (("M-j" . find-file)
-         ("M-J" . find-file-other-window))
   :config
   (selectrum-mode +1)
   (setq selectrum-prescient-enable-filtering nil)
