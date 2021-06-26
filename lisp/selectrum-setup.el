@@ -9,6 +9,8 @@
   (prescient-persist-mode +1))
 
 (use-package selectrum
+  :bind (("M-j" . find-file)
+         ("M-J" . find-file-other-window))
   :config
   (selectrum-mode +1)
   (setq selectrum-prescient-enable-filtering nil)
@@ -42,6 +44,7 @@
          ;; C-x bindings (ctl-x-map)
          ("C-x M-:" . consult-complex-command)     ;; orig. repeat-complex-command
          ("C-x b" . consult-buffer)                ;; orig. switch-to-buffer
+         ("M-o" . consult-buffer)                ;; orig. switch-to-buffer
          ("C-x 4 b" . consult-buffer-other-window) ;; orig. switch-to-buffer-other-window
          ("C-x 5 b" . consult-buffer-other-frame)  ;; orig. switch-to-buffer-other-frame
          ;; Custom M-# bindings for fast register access
