@@ -11,8 +11,10 @@
          ("C-c C-," . unhighlight-regexp)
          ("C-M-o" . mode-line-other-window)
          ("C-c C-r" . revert-buffer)
-         ("C-c |" . eval-region))
-  
+         ("C-c |" . eval-region)
+         ("C-c f" . find-name-dired)
+         ("C-c F" . find-dired)
+         ("C-c r" . remember))
   :init
   ;; Preferred way as per documentation
   ;; https://www.gnu.org/software/emacs/manual/html_node/efaq/Backspace-invokes-help.html
