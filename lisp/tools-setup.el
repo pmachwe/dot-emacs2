@@ -212,4 +212,7 @@
   :config
   (define-key vdiff-mode-map (kbd "C-c") vdiff-mode-prefix-map))
 
+(use-package minions
+  :config (minions-mode 1))
+
 (provide 'tools-setup)
