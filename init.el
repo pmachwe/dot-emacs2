@@ -8,7 +8,7 @@
           (const :tag "package" package)
           (const :tag "straight" straight)))
 
-(defcustom pm-completion-system 'ido
+(defcustom pm-completion-system 'selectrum
   "The completion system to be used."
   :group 'pm-setup
   :type '(radio
