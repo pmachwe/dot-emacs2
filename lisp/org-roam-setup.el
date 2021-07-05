@@ -1,11 +1,10 @@
 ;;; Settings for org-roam and other note taking packages
 
 (use-package org-roam
-  :disabled t
   :bind (("C-c r f" . org-roam-find-file)
          ("C-c r i" . org-roam-insert)
-         ("C-c r t" . org-roam-dailies-today)
-         ("C-c r y" . org-roam-dailies-yesterday)
+         ("C-c r t" . org-roam-dailies-find-today)
+         ("C-c r y" . org-roam-dailies-find-yesterday)
          ("C-c r r" . org-roam))
   :config
   (setq org-roam-directory "~/org-roam")
