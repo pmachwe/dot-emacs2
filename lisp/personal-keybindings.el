@@ -14,7 +14,7 @@
          ("C-c |" . eval-region)
          ("C-c f" . find-name-dired)
          ("C-c F" . find-dired)
-         ("C-c r" . remember)
+         ("C-c C-r" . remember)
          (("M-j" . find-file)
          ("M-J" . find-file-other-window)))
   :init
