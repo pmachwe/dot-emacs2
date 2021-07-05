@@ -38,12 +38,9 @@
          ("C-c a" . org-agenda)
          ("C-c c" . org-capture)))
 
-(use-package htmlize
-  :after org
-  :hook org-mode)
+(use-package htmlize)
 
 (use-package org-tree-slide
-  :hook org-mode
   :bind (:map org-mode-map
               ("[f8]" . org-tree-slide-mode)
               ("[S-f8]" . org-tree-slide-skip-done)))
