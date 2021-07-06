@@ -14,10 +14,10 @@
       (setq org-agenda-files (append org-agenda-files org-roam-agenda-dirs))
     (setq org-agenda-files org-roam-agenda-dirs))
   (setq org-roam-dailies-capture-templates '(("d" "daily" plain #'org-roam-capture--get-point
-                                              "\n\n* Tasks\n\n* Discussions"
+                                              "%?"
                                               :immediate-finish t
                                               :file-name "dailies/daily-%<%B-%m-%Y>"
-                                              :head "#+title: %<%B %m, %Y>"))))
+                                              :head "#+title: %<%B %m, %Y>\n\n* Tasks\n\n* Discussions"))))
 
 
 (use-package deft
