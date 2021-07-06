@@ -9,6 +9,7 @@
          ("C-c r r" . org-roam))
   :config
   (setq org-roam-directory "~/org-roam")
+  (setq org-return-follows-link t)
   (setq org-roam-agenda-dirs (list org-roam-directory (f-join org-roam-directory "dailies")))
   (if (boundp 'org-agenda-files)
       (setq org-agenda-files (append org-agenda-files org-roam-agenda-dirs))
