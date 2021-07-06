@@ -5,6 +5,7 @@
          ("C-c r i" . org-roam-insert)
          ("C-c r t" . org-roam-dailies-find-today)
          ("C-c r y" . org-roam-dailies-find-yesterday)
+         ("C-c r T" . org-roam-dailies-capture-today)
          ("C-c r r" . org-roam))
   :config
   (setq org-roam-directory "~/org-roam")
@@ -15,8 +16,8 @@
   (setq org-roam-dailies-capture-templates '(("d" "daily" plain #'org-roam-capture--get-point
                                               "\n\n* Tasks\n\n* Discussions"
                                               :immediate-finish t
-                                              :file-name "dailies/daily-%<%Y-%m-%d>"
-                                              :head "#+title: daily-%<%Y-%m-%d>"))))
+                                              :file-name "dailies/daily-%<%B-%m-%Y>"
+                                              :head "#+title: %<%B %m, %Y>"))))
 
 
 (use-package deft
