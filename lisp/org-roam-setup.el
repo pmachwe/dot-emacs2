@@ -35,4 +35,4 @@
   ;;key to launch deft
   (global-set-key (kbd "C-c r d") 'deft))
 
-(provide 'org-roam)
+(provide 'org-roam-setup)
