@@ -21,7 +21,7 @@
 
 
 (use-package deft
-  :disabled t
+  :after org-roam
   :config
   (setq deft-directory "~/org-roam")
   (setq deft-extensions '("org"))
@@ -30,7 +30,8 @@
   (setq deft-use-filename-as-title t)
   (setq deft-use-filter-string-for-filename t)
   (setq deft-auto-save-interval 0)
+  (setq deft-recursive t)
   ;;key to launch deft
-  (global-set-key (kbd "C-c d") 'deft))
+  (global-set-key (kbd "C-c r d") 'deft))
 
 (provide 'org-roam)
