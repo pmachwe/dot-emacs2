@@ -28,6 +28,9 @@
 (defcustom pm-lsp-mode nil
   "LSP mode to use.")
 
+(defcustom pm-nano-emacs nil
+  "Use nano emacs customizations.")
+
 ;; The default is 800 kilobytes.  Measured in bytes.
 (setq gc-cons-threshold (* 50 1000 1000))
 
@@ -53,7 +56,9 @@
  ((eq pm-package-manager 'straight)
   (load "straight-setup")))
 
-(load "themes-setup")
+(if pm-nano-emacs
+    (load "nano-setup")
+  (load "themes-setup"))
 (load "basic-setup")
 
 (cond
