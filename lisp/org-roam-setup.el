@@ -35,4 +35,12 @@
   ;;key to launch deft
   (global-set-key (kbd "C-c r d") 'deft))
 
+(use-package org-download
+  :config
+  (setq-default org-download-method 'directory)
+  (setq-default org-download-image-dir "~/org-roam/images")
+  ;; (setq-default org-download-screenshot-method "i_view64 /capture=4 /convert=\"%s\"")
+  (add-hook 'org-mode-hook 'org-download-enable)
+  (add-hook 'dired-mode-hook 'org-download-enable))
+
 (provide 'org-roam-setup)

@@ -36,6 +36,7 @@
   (change-theme 'modus-operandi 'nord))
 
 (use-package bespoke-themes
+  :disabled t
   :straight (:host github :repo "mclear-tools/bespoke-themes" :branch "main")
   :config
   ;; Set header line

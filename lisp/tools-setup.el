@@ -119,7 +119,6 @@
   (xclip-mode 1))
 
 (use-package ace-window
-  :defer 2
   :config  
   (setq aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l))
   (setq aw-dispatch-alist
