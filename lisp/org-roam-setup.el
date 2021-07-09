@@ -16,7 +16,7 @@
                                               :head "#+title: %<%B %m, %Y>\n\n* Tasks\n\n* Discussions")))
 
   ;; Some functions to work on Windows
-  (defcustom device-screenshot-dir "~/OneDrive/Pictures"
+  (defcustom device-screenshot-dir nil
     "Directory where screenshots are to be found.")
 
   (defun is-image-file (file)
@@ -36,7 +36,8 @@
            (file-name (f-filename orig-file))
            (new-file-name (f-join org-roam-directory "images" file-name)))
       (f-copy orig-file new-file-name)
-      (insert (concat "[[./" (f-relative new-file-name) "]]"))))
+      (insert (concat "[[./" (f-relative new-file-name) "]]"))
+      (org-display-inline-images)))
 
   :bind (("C-c r f" . org-roam-find-file)
          ("C-c r i" . org-roam-insert)
