@@ -35,16 +35,6 @@
    '(org-level-4 ((t (:inherit outline-4 :height 1.05))))
    '(org-document-title ((t (:underline t :weight bold :height 1.3)))))
 
-  (defvar org-electric-pairs '((?\* . ?\*) (?/ . ?/) (?= . ?=)
-                               (?\_ . ?\_) (?~ . ?~) (?+ . ?+)) "Electric pairs for org-mode.")
-
-  ;; Setting up electric-pairs for org-mode
-  (defun org-add-electric-pairs ()
-    (setq-local electric-pair-pairs (append electric-pair-pairs org-electric-pairs))
-    (setq-local electric-pair-text-pairs electric-pair-pairs))
-
-  (add-hook 'org-mode-hook 'org-add-electric-pairs)
-  
   :bind (("C-c l" . org-store-link)
          ("C-c a" . org-agenda)
          ("C-c c" . org-capture)))
@@ -70,5 +60,22 @@
                       (turn-on-auto-fill)
                       (org-indent-mode t)
                       (setq adaptive-fill-mode t))))
+
+(use-package elec-pair
+  :config
+  (defvar org-electric-pairs '((?\* . ?\*) (?/ . ?/) (?= . ?=)
+                               (?\_ . ?\_) (?~ . ?~) (?+ . ?+)) "Electric pairs for org-mode.")
+  
+  ;; Setting up electric-pairs for org-mode
+  (defun org-add-electric-pairs ()
+    (setq-local electric-pair-pairs (append electric-pair-pairs org-electric-pairs))
+    (setq-local electric-pair-text-pairs electric-pair-pairs))
+
+  (add-hook 'org-mode-hook 'org-add-electric-pairs))
+
+(use-package olivetti
+  :hook (org-mode . olivetti-mode)
+  :config
+  (turn-off-auto-fill))
 
 (provide 'org-setup)
