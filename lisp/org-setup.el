@@ -36,7 +36,16 @@
    '(org-document-title ((t (:underline t :weight bold :height 1.3)))))
   :bind (("C-c l" . org-store-link)
          ("C-c a" . org-agenda)
-         ("C-c c" . org-capture)))
+         ("C-c c" . org-capture))
+
+  (defvar org-electric-pairs '((?\* . ?\*) (?/ . ?/) (?= . ?=)
+                               (?\_ . ?\_) (?~ . ?~) (?+ . ?+)) "Electric pairs for org-mode.")
+
+  (defun org-add-electric-pairs ()
+    (setq-local electric-pair-pairs (append electric-pair-pairs org-electric-pairs))
+    (setq-local electric-pair-text-pairs electric-pair-pairs))
+
+  (add-hook 'org-mode-hook 'org-add-electric-pairs))
 
 (use-package htmlize)
 
