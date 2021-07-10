@@ -50,6 +50,9 @@
 (add-to-list 'load-path
 	     (concat user-emacs-directory "/lisp"))
 
+;; May not exist
+(load "local-custom" t)
+
 (cond
  ((eq pm-package-manager 'package)
   (load "package-setup"))
