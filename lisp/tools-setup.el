@@ -223,4 +223,8 @@
 (use-package quick-search
   :straight (quick-search :type git :host github :repo "pmachwe/quick-search" :protocol ssh))
 
+(use-package ctrlf
+  :config
+  (ctrlf-mode +1))
+
 (provide 'tools-setup)
