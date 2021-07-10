@@ -12,6 +12,18 @@
   (tooltip-mode -1)
   ;; nano override C-c r which I used for roam
   (global-unset-key (kbd "C-c r"))
-  (global-set-key (kbd "C-c C-f") 'recentf-open-files))
+  (global-set-key (kbd "C-c C-f") 'recentf-open-files)
+  ;; nano overrides faces and bold and italics do not
+  ;; comme out in org-mode
+  (set-face-attribute 'italic nil
+                      :slant 'oblique
+                      :foreground nano-color-foreground
+                      :weight 'normal
+                      :underline nil)
+
+  (set-face-attribute 'bold nil
+                      :weight 'ultra-bold
+                      :underline nil)
+)
 
 (provide 'nano-setup)
