@@ -4,7 +4,7 @@
   :straight (nano-emacs :type git :host github :repo "rougier/nano-emacs")
   :init
   ;; font etc need to be set before loading
-  (setq nano-font-size 12)
+  (setq nano-font-size 11)
   :config
   (menu-bar-mode -1)
   (tool-bar-mode -1)

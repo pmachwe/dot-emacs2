@@ -13,8 +13,23 @@
                                               "%?"
                                               :immediate-finish t
                                               :file-name "dailies/daily-%<%B-%m-%Y>"
-                                              :head "#+title: %<%B %m, %Y>\n\n* Tasks\n\n* Discussions")))
-
+                                              :head "#+title: %<%B %m, %Y>\n\n* Tasks\n\n* Discussions"
+                                              :unnarrowed t
+                                              :jump-to-captured t)))
+  
+  (setq org-roam-capture-templates '(("d" "default" plain #'org-roam-capture--get-point
+                                      :immediate-finish t
+                                      :file-name "%<%Y%m%d%H%M%S>-${title}"
+                                      :head "#+title: ${title}\n#+created: %u\n#+roam_tags:\n%?"
+                                      :unnarrowed t
+                                      :jump-to-captured t)
+                                     ("t" "temp" plain #'org-roam-capture--get-point
+                                      :immediate-finish t
+                                      :file-name "temp/%<%Y%m%d%H%M%S>-${title}"
+                                      :head "#+title: ${title}\n#+created: %u\n#+roam_tags: temp\n%?"
+                                      :unnarrowed t
+                                      :jump-to-captured t)))
+  
   ;; Some functions to work on Windows
   (defcustom device-screenshot-dir nil
     "Directory where screenshots are to be found.")
