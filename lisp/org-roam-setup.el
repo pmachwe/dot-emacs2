@@ -2,7 +2,7 @@
 
 (use-package org-roam
   :config
-  (setq org-roam-directory "~/org-roam")
+  (setq org-roam-directory "~/OneDrive/org-roam")
   (setq org-return-follows-link t)
   (setq org-roam-agenda-dirs (list org-roam-directory (f-join org-roam-directory "dailies")))
   (setq org-startup-with-inline-images t)
@@ -65,7 +65,7 @@
 (use-package deft
   :after org-roam
   :config
-  (setq deft-directory "~/org-roam")
+  (setq deft-directory org-roam-directory)
   (setq deft-extensions '("org"))
   (setq deft-default-extension "org")
   (setq deft-text-mode 'org-mode)
@@ -82,7 +82,7 @@
   :disabled
   :config
   (setq-default org-download-method 'directory)
-  (setq-default org-download-image-dir "~/org-roam/images")
+  (setq-default org-download-image-dir (f-join org-roam-directory "images"))
   ;; (setq-default org-download-screenshot-method "i_view64 /capture=4 /convert=\"%s\"")
   (add-hook 'org-mode-hook 'org-download-enable)
   (add-hook 'dired-mode-hook 'org-download-enable))
