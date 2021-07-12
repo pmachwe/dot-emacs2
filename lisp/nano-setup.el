@@ -24,6 +24,9 @@
   (set-face-attribute 'bold nil
                       :weight 'ultra-bold
                       :underline nil)
+  ;; nano also override username and email
+  (setq user-full-name "Parikshit Machwe")
+  (setq user-mail-address "pmachwe@gmail.com")
 )
 
 (provide 'nano-setup)
