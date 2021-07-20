@@ -160,7 +160,19 @@
                                (member buf (mapcar 'buffer-name (persp-buffers (persp-curr)))))
                              (seq-remove (lambda (x) (string-match-p filter x))
                                          (consult--cached-buffer-names)))))
-            "Buffer candidate source for `consult-buffer'."))))
+            "Buffer candidate source for `consult-buffer'.")))
+
+  ;; Get the shell buffers through shutil.
+  ;; TODO: Creating new shell is not working now.
+  (with-eval-after-load 'shutil
+    (add-to-list 'consult-buffer-sources
+              (list :name     "Shells"
+                    :narrow   ?s
+                    :category 'consult-new
+                    :face     'font-lock-constant-face
+                    :action   #'(lambda (_) (shutil-get-new-shell))
+                    :items    #'shutil-get-shell-list)
+              'append)))
 
 (use-package embark
   :bind
