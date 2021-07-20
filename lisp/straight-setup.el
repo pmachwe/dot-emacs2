@@ -18,6 +18,7 @@
 
 (setq straight-use-package-by-default t)
 (straight-use-package 'use-package)
+(setq use-package-expand-minimally t)
 
 (add-to-list 'straight-built-in-pseudo-packages 'dired)
 (add-to-list 'straight-built-in-pseudo-packages 'dired-async)
