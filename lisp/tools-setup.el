@@ -216,7 +216,8 @@
 
 (use-package shutil
   :straight (shutil :type git :host github :repo "pmachwe/emacs-shutil" :protocol ssh)
-  :bind (("C-c s n" . shutil-get-new-shell)
+  :bind (("<f5>" . shutil-get-new-shell)
+         ("C-c s n" . shutil-get-new-shell)
          ("C-c s b" . shutil-switch-to-buffer)
          ("C-c s |" . shutil-split-vertically)))
 
