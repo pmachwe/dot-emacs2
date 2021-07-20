@@ -142,7 +142,25 @@
   ;; (setq consult-project-root-function #'vc-root-dir)
   ;;;; 4. locate-dominating-file
   ;; (setq consult-project-root-function (lambda () (locate-dominating-file "." ".git")))
-)
+
+  ;; Only show buffers from current perspective.
+  (with-eval-after-load 'perspective
+    (setq consult--source-buffer
+          `(:name     "Buffer"
+            :narrow   ?b
+            :category buffer
+            :face     consult-buffer
+            :history  buffer-name-history
+            :state    ,#'consult--buffer-state
+            :default  t
+            :items
+            ,(lambda ()
+               (let ((filter (consult--regexp-filter consult-buffer-filter)))
+                 (seq-filter (lambda (buf)
+                               (member buf (mapcar 'buffer-name (persp-buffers (persp-curr)))))
+                             (seq-remove (lambda (x) (string-match-p filter x))
+                                         (consult--cached-buffer-names)))))
+            "Buffer candidate source for `consult-buffer'."))))
 
 (use-package embark
   :bind
