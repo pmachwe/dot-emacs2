@@ -28,4 +28,17 @@
   (global-set-key (kbd "C-c h i") 'emacs-index-search)
   (global-set-key (kbd "C-c h I") 'info))
 
+(use-package key-chord
+  :config
+  (key-chord-mode 1)
+  (key-chord-define-global ",f" 'find-file)
+  (key-chord-define-global ",b" 'switch-to-buffer)
+  (key-chord-define-global ",," 'avy-goto-char-timer)
+  (key-chord-define-global ",o" 'ace-window)
+  (key-chord-define-global ",k" 'kill-buffer-and-window)
+  (key-chord-define-global ",v" 'split-window-sensibly)
+  (key-chord-define-global ",d" 'delete-other-windows)
+  (key-chord-define-global ",s" 'isearch-forward-regexp)
+  (key-chord-define-global ",." 'isearch-forward-symbol-at-point))
+
 (provide 'personal-keybindings)
