@@ -39,6 +39,7 @@
   (key-chord-define-global ",v" 'split-window-sensibly)
   (key-chord-define-global ",d" 'delete-other-windows)
   (key-chord-define-global ",s" 'isearch-forward-regexp)
-  (key-chord-define-global ",." 'isearch-forward-symbol-at-point))
+  (key-chord-define-global ",." 'isearch-forward-symbol-at-point)
+  (key-chord-define-global ", " 'execute-extended-command))
 
 (provide 'personal-keybindings)
