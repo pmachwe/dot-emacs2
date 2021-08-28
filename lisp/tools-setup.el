@@ -228,4 +228,7 @@
   :config
   (ctrlf-mode +1))
 
+(use-package evil
+  :bind ("M-e" . evil-local-mode))
+
 (provide 'tools-setup)
