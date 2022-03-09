@@ -1,13 +1,14 @@
 ;;; Setup themes etc
 
 (use-package doom-themes
-  :disabled
   :config
   ;; Global settings (defaults)
   (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
         doom-themes-enable-italic t) ; if nil, italics is universally disabled
   ;; Corrects (and improves) org-mode's native fontification.
-  (doom-themes-org-config))
+  ;; (doom-themes-org-config)
+  (load-theme 'doom-opera t))
+  
 
 (use-package modus-operandi-theme
   :disabled t
@@ -20,8 +21,7 @@
   (load-theme 'nord t))
 
 (use-package telephone-line
-  :disabled t
-  :if window-system
+  :if (display-graphic-p)
   :init
   (telephone-line-mode t))
 
@@ -104,6 +104,7 @@
 
 
 (use-package splash-screen
+  :disabled t
   :straight (emacs-splash :host github :repo "rougier/emacs-splash"))
 
 (provide 'themes-setup)
