@@ -16,11 +16,16 @@
 ;; if you are helm user
 (use-package helm-lsp
   :if (eq pm-completion-system 'helm)
-  :commands helm-lsp-workspace-symbol)
+  :commands helm-lsp-workspace-symbol
+  :config
+  (define-key lsp-mode-map [remap xref-find-apropos] #'helm-lsp-workspace-symbol))
 
 (use-package ivy-lsp
+  ::straight (lsp-ivy :host github :repo "emacs-lsp/lsp-ivy")
   :if (eq pm-completion-system 'ivy)
-  :commands lsp-ivy-workspace-symbol)
+  :commands lsp-ivy-workspace-symbol
+  :config
+  (define-key lsp-mode-map [remap xref-find-apropos] #'lsp-ivy-workspace-symbol))
 
 ;;; NOTE: pyls is extremely slow atleast on windows
 ;;;       but jedi is reasonable
