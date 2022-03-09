@@ -21,7 +21,7 @@
   (load-theme 'nord t))
 
 (use-package telephone-line
-  :if (display-graphic-p)
+  ;; :if (display-graphic-p)
   :init
   (telephone-line-mode t))
 
