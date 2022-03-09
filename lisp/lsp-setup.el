@@ -9,6 +9,8 @@
          (c++-mode . lsp)
          ;; if you want which-key integration
          (lsp-mode . lsp-enable-which-key-integration))
+  :config
+  (add-to-list 'lsp-enabled-clients 'clangd)
   :commands lsp)
 
 ;; optionally
