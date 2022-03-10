@@ -34,7 +34,8 @@
 (use-package consult-lsp
   :straight (consult-lsp :type git :host github :repo "gagbo/consult-lsp" :protocol ssh)
   :if (eq pm-completion-system 'selectrum)
-  :commands (consult-lsp-symbols consult-lsp-diagnostics consult-lsp-file-symbols))
+  :commands (consult-lsp-symbols consult-lsp-diagnostics consult-lsp-file-symbols)
+  :config (define-key lsp-mode-map [remap xref-find-apropos] #'consult-lsp-symbols))
 
 ;;; NOTE: pyls is extremely slow atleast on windows
 ;;;       but jedi is reasonable
