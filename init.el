@@ -81,6 +81,8 @@
 (cond
  ((eq pm-autocomplete-framework 'company)
   (load "company-setup"))
+ ((eq pm-autocomplete-framework 'corfu)
+  (load "corfu-setup"))
  ((eq pm-autocomplete-framework 'auto-complete)
   (load "auto-complete-setup")))
 
