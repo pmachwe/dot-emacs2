@@ -1,6 +1,7 @@
 ;;; Setup for projectile mode.
 
 (use-package projectile
+  :disabled t
   :bind-keymap
   ("C-c p" . projectile-command-map)
   :config
