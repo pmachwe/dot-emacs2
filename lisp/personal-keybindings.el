@@ -20,7 +20,7 @@
   :init
   ;; Preferred way as per documentation
   ;; https://www.gnu.org/software/emacs/manual/html_node/efaq/Backspace-invokes-help.html
-  (keyboard-translate ?\C-h ?\C-?)
+  ;; (keyboard-translate ?\C-h ?\C-?)
 
   ;; Help-map is not a defun and hence does not get mapped
   ;; through the bind mapping above
