@@ -6,7 +6,7 @@
 
   (defun my/common-prog-settings()
     "Setup common settings for all programming."
-    (when window-system (linum-mode 1))
+    ;; (when window-system (linum-mode 1))
     (local-set-key (kbd "RET") 'newline-and-indent)
     (subword-mode 1)
     (setq-default indent-tabs-mode nil)
