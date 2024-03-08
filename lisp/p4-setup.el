@@ -37,7 +37,24 @@
   (require 'p4)
   (defadvice p4-call-command (before my-set-p4-client())
     (my/set-client))
-  (ad-activate 'p4-call-command))
+  (ad-activate 'p4-call-command)
+
+  ;; Let projectl.el know the perforce root
+  (defun my/project-find-root(path)
+    (when-let ((root (locate-dominating-file path ".p4config")))
+      (cons 'transient (expand-file-name root))))
+
+  (add-hook 'project-find-functions #'my/project-find-root)
+
+  ;; Interactively select a changelist to get further information
+  ;; about it
+  (defun my/select-p4-chnglist ()
+    (interactive)
+    (nth 1
+         (s-split-words
+          (completing-read "Select Changelist: "
+                           (s-lines
+                            (shell-command-to-string "p4 changes -c $P4CLIENT -u $P4USER")))))))
 
 
 (provide 'p4-setup)
