@@ -8,7 +8,7 @@
           (const :tag "package" package)
           (const :tag "straight" straight)))
 
-(defcustom pm-completion-system 'selectrum
+(defcustom pm-completion-system 'vertico
   "The completion system to be used."
   :group 'pm-setup
   :type '(radio
@@ -16,6 +16,7 @@
           (const :tag "Helm" helm)
           (const :tag "Ivy" ivy)
           (const :tag "Selectrum" selectrum)
+          (const :tag "Vertico" vertico)
           (const :tag "Default" default)))
 
 (defcustom pm-autocomplete-framework 'company
@@ -72,7 +73,10 @@
  ((eq pm-completion-system 'ivy)
   (load "ivy-setup"))
  ((eq pm-completion-system 'selectrum)
-  (load "selectrum-setup")))
+  (load "selectrum-setup"))
+ ((eq pm-completion-system 'vertico)
+  (load "vertico-setup")
+  (load "consult-setup")))
 
 (cond
  ((eq pm-autocomplete-framework 'company)
@@ -90,7 +94,7 @@
     (load "lsp-setup")
   (load "python-setup"))
 (load "org-setup")
-(load "org-roam-setup")
+;; (load "org-roam-setup")
 (load "personal-keybindings")
 (load "functions")
 ;; May not exist
